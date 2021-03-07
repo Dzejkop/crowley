@@ -1,0 +1,6 @@
+CREATE TABLE domain (url TEXT PRIMARY KEY NOT NULL);
+CREATE TABLE link (
+    url TEXT PRIMARY KEY NOT NULL,
+    domainUrl TEXT NOT NULL,
+    FOREIGN KEY (domainUrl) REFERENCES domain (url)
+);
